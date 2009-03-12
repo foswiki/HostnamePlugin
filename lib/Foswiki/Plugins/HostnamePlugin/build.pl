@@ -1,14 +1,22 @@
 #!/usr/bin/perl -w
+#
+# Build for HostnamePlugin
+#
+
+
 BEGIN {
-    unshift @INC, split( /:/, $ENV{FOSWIKI_LIBS} );
+  foreach my $pc (split(/:/, $ENV{FOSWIKI_LIBS})) {
+    unshift @INC, $pc;
+  }
 }
-use TWiki::Contrib::Build;
+
+use Foswiki::Contrib::Build;
 
 # Create the build object
-$build = new TWiki::Contrib::Build('HostnamePlugin');
+$build = new Foswiki::Contrib::Build('HostnamePlugin');
 
 # (Optional) Set the details of the repository for uploads.
-# This can be any web on any accessible TWiki installation.
+# This can be any web on any accessible Foswiki installation.
 # These defaults will be used when expanding tokens in .txt
 # files, but be warned, they can be overridden at upload time!
 

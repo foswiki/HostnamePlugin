@@ -2,11 +2,15 @@
 ---+!! !HostnamePlugin
 <!--
 One line description, required for extensions repository catalog.
-   * Set SHORTDESCRIPTION = Displays the hostname of the server serving TWiki.
+   * Set SHORTDESCRIPTION = Displays the hostname of the server serving Foswiki.
 -->
 %SHORTDESCRIPTION%
 
 %TOC%
+
+---++ Description
+
+This is a simple plugin that displays the hostname of the server that served the request. It can be useful when using a load balancer so you can be sure which server served the request.
 
 ---++ Usage
 
@@ -28,16 +32,16 @@ One line description, required for extensions repository catalog.
 
 ---++ Plugin Info
 
-|  Plugin Author(s): | TWiki:Main.AndrewRJones |
-|  Copyright: | &copy; 2007, TWiki:Main.AndrewRJones |
+|  Plugin Author(s): | Foswiki:Main.AndrewJones |
+|  Copyright: | &copy; 2007 - 2009, Foswiki:Main.AndrewJones |
 |  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Plugin Release: | %$RELEASE% |
 |  Plugin Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
-|  14486 | Bugs:Item4420 - Initial version |
+|  12 Mar 2009 | 1.0: Initial release - Foswiki:Main.AndrewJones |
 |  Dependencies: | %$DEPENDENCIES% |
-|  Plugin Home: | http://twiki.org/cgi-bin/view/Plugins/HostnamePlugin |
-|  Feedback: | http://twiki.org/cgi-bin/view/Plugins/HostnamePluginDev |
-|  Appraisal: | http://twiki.org/cgi-bin/view/Plugins/HostnamePluginAppraisal |
+|  Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% | 
 
 __Related Topics:__ [[%SYSTEMWEB%.Plugins][Plugins]], %SYSTEMWEB%.DeveloperDocumentationCategory, %SYSTEMWEB%.AdminDocumentationCategory, [[%SYSTEMWEB%.Macros][Macros]]
 

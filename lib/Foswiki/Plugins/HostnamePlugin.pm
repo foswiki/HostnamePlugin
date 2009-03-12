@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2007 Andrew Jones, andrewjones86@googlemail.com
+# Copyright (C) 2007 - 2009 Andrew Jones, andrewjones86@googlemail.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -13,28 +13,28 @@
 # GNU General Public License for more details, published at
 # http://www.gnu.org/copyleft/gpl.html
 
-package TWiki::Plugins::HostnamePlugin;
+package Foswiki::Plugins::HostnamePlugin;
 
 use strict;
 
 use vars qw( $VERSION $RELEASE $SHORTDESCRIPTION $debug $pluginName $NO_PREFS_IN_TOPIC );
 
-$VERSION = '$Rev$';
-$RELEASE = 'TWiki-4.2';
-$SHORTDESCRIPTION = 'Displays the hostname of the server serving TWiki.';
-$NO_PREFS_IN_TOPIC = 1;
-$pluginName = 'HostnamePlugin';
+our $VERSION = '$Rev$';
+our $RELEASE = '1.0';
+our $SHORTDESCRIPTION = 'Displays the hostname of the server serving Foswiki.';
+our $NO_PREFS_IN_TOPIC = 1;
+our $pluginName = 'HostnamePlugin';
 
 sub initPlugin {
     #my( $topic, $web, $user, $installWeb ) = @_;
 
     # check for Plugins.pm versions
-    if( $TWiki::Plugins::VERSION < 1.026 ) {
-        TWiki::Func::writeWarning( "Version mismatch between $pluginName and Plugins.pm" );
+    if( $Foswiki::Plugins::VERSION < 1 ) {
+        Foswiki::Func::writeWarning( "Version mismatch between $pluginName and Plugins.pm" );
         return 0;
     }
 
-    TWiki::Func::registerTagHandler( 'HOSTNAME', \&_handleTag);
+    Foswiki::Func::registerTagHandler( 'HOSTNAME', \&_handleTag);
 
     # Plugin correctly initialized
     return 1;
@@ -47,8 +47,8 @@ sub _handleTag {
     if (! $@ ){
         return hostname();
     } else {
-        TWiki::Func::writeWarning( $@ );
-        return "<span class='twikiAlert'>$pluginName error: Sys::Hostname not found in \@INC. Please contact %WIKIWEBMASTER%.";
+        Foswiki::Func::writeWarning( $@ );
+        return "<span class='foswikiAlert'>$pluginName error: Sys::Hostname not found in \@INC. Please contact %WIKIWEBMASTER%.";
     }
 }
 

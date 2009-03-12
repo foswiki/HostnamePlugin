@@ -1,0 +1,4 @@
+# Release manifest for HostnamePlugin
+data/System/HostnamePlugin.txt 0644 Documentation
+data/System/VarHOSTNAME.txt 0644 Macro documentation
+lib/Foswiki/Plugins/HostnamePlugin.pm 0644 Perl module
