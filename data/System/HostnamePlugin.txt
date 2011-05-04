@@ -33,11 +33,12 @@ This is a simple plugin that displays the hostname of the server that served the
 ---++ Plugin Info
 
 |  Plugin Author(s): | Foswiki:Main.AndrewJones |
-|  Copyright: | &copy; 2007 - 2009, Foswiki:Main.AndrewJones |
+|  Copyright: | &copy; 2007 - 2011, Foswiki:Main.AndrewJones |
 |  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
 |  Plugin Release: | %$RELEASE% |
 |  Plugin Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  04 May 2011 | 1.1: Foswiki:Task.Item10708: Non-closing span on error message - Foswiki:Main.AndrewJones |
 |  12 Mar 2009 | 1.0: Initial release - Foswiki:Main.AndrewJones |
 |  Dependencies: | %$DEPENDENCIES% |
 |  Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
